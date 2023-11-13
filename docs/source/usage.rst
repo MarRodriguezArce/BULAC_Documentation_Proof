@@ -1,34 +1,25 @@
 Usage
 =====
 
-.. _installation:
+.. _requirements:
 
-Installation
+Requirements 
 ------------
+* BULAC requires installing Anaconda 
+* Microsoft Office
 
-To use Lumache, first install it using pip:
+Limitations of the model
+-------------------------------
 
-.. code-block:: console
+BULAC allows modeling the energy matrix of Latin American countries; however, it has the following limitations:
 
-   (.venv) $ pip install lumache
+- The model has no dispatch optimization functions.
+- The model approach is exploratory.
+- The model omits the power grid from its analysis (e.g., line loadability, or frequency and voltage stability) and sub-hourly analysis (has annual resolution).
 
-Creating recipes
-----------------
+User Guide
+-----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+The user guide is intended to provide guidance to its users on the functions of this tool, such as entering parameters, configuring scenarios, and running the model. For this study, the model is calibrated using Python processing of the OLADE database of both installed capacity and energy balances.
+Feel free to adjust the formatting or add more sections as needed. Save this content in a file 
 
